@@ -1,0 +1,29 @@
+{
+  "name": "tweetchat-backend",
+  "version": "1.0.0",
+  "description": "TweetChat Social Media Realtime Chat App Backend in Node.js(Express.js), Socket.io, Multer, Nodemailer, MongoDB & Zegocloud.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon -r esm server.js",
+    "start": "node -r esm server.js"
+  },
+  "keywords": [],
+  "author": "Debjyoti Das",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "joi": "^17.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.9.9",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
