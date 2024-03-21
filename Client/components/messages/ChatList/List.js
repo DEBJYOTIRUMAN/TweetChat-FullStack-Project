@@ -19,7 +19,7 @@ const List = ({
         const {
           data: { users, onlineUsers },
         } = await axios.get(
-          `http://localhost:5000/api/get-initial-contacts/${currentUser.id}`,
+          `https://tweetchat-1y3f.onrender.com/api/get-initial-contacts/${currentUser.id}`,
           {
             headers: {
               Authorization: `Bearer ${token.access_token}`,

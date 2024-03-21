@@ -36,7 +36,7 @@ const PostBox = ({ token, currentAccount, currentUser, posts, setPosts }) => {
     formData.append("caption", postMessage);
     try {
       const newPost = await axios.post(
-        `http://localhost:5000/api/post/${currentAccount}`,
+        `https://tweetchat-1y3f.onrender.com/api/post/${currentAccount}`,
         formData,
         {
           headers: {

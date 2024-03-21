@@ -24,7 +24,7 @@ const ProfileImageUploader = ({
     formData.append("profileImage", profileImage);
     try {
       const userDoc = await axios.put(
-        `http://localhost:5000/api/user/image/${currentAccount}`,
+        `https://tweetchat-1y3f.onrender.com/api/user/image/${currentAccount}`,
         formData,
         {
           headers: {

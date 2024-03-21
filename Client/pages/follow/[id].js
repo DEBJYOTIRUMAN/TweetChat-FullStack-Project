@@ -35,7 +35,7 @@ const follow = () => {
   useEffect(() => {
     if (!user) return;
     if (activeTab === "Followers") {
-      fetch("http://localhost:5000/api/user/followers", {
+      fetch("https://tweetchat-1y3f.onrender.com/api/user/followers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const follow = () => {
           setFollowers(documents);
         });
     } else {
-      fetch("http://localhost:5000/api/user/following", {
+      fetch("https://tweetchat-1y3f.onrender.com/api/user/following", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const MessageBar = ({
       const formData = new FormData();
       formData.append("image", file);
       const response = await axios.post(
-        "http://localhost:5000/api/add-image-message",
+        "https://tweetchat-1y3f.onrender.com/api/add-image-message",
         formData,
         {
           headers: {
@@ -98,7 +98,7 @@ const MessageBar = ({
   const sendMessage = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/add-message",
+        "https://tweetchat-1y3f.onrender.com/api/add-message",
         {
           to: currentChatUser?.id,
           from: currentUser?.id,

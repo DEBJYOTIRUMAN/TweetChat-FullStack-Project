@@ -32,7 +32,7 @@ const EditCoverModal = ({
     formData.append("coverImage", coverImage);
     try {
       const userDoc = await axios.put(
-        `http://localhost:5000/api/user/cover/${currentAccount}`,
+        `https://tweetchat-1y3f.onrender.com/api/user/cover/${currentAccount}`,
         formData,
         {
           headers: {

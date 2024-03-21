@@ -36,7 +36,7 @@ const VoiceMessage = ({ message, currentChatUser, currentUser }) => {
   }, []);
 
   useEffect(() => {
-    const audioURL = `http://localhost:5000/${message.message}`;
+    const audioURL = `https://tweetchat-1y3f.onrender.com/${message.message}`;
     const audio = new Audio(audioURL);
     setAudioMessage(audio);
     waveform.current.load(audioURL);

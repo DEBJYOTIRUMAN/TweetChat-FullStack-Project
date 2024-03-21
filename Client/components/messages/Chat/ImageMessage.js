@@ -20,7 +20,7 @@ const ImageMessage = ({ message, currentChatUser }) => {
       >
         <div className="relative">
           <Image
-            src={`http://localhost:5000/${message.message}`}
+            src={`https://tweetchat-1y3f.onrender.com/${message.message}`}
             className="rounded-lg sm:hidden"
             alt="asset"
             height={250}
@@ -29,7 +29,7 @@ const ImageMessage = ({ message, currentChatUser }) => {
             onClick={() => setShowImage(true)}
           />
           <Image
-            src={`http://localhost:5000/${message.message}`}
+            src={`https://tweetchat-1y3f.onrender.com/${message.message}`}
             className="hidden sm:block rounded-lg"
             alt="asset"
             height={150}
@@ -48,7 +48,7 @@ const ImageMessage = ({ message, currentChatUser }) => {
               message.message
                 ? downloadImage(
                     message._id,
-                    `http://localhost:5000/${message.message}`
+                    `https://tweetchat-1y3f.onrender.com/${message.message}`
                   )
                 : null
             }
@@ -64,7 +64,7 @@ const ImageMessage = ({ message, currentChatUser }) => {
       >
         <ShowImageModal
           setShowImage={setShowImage}
-          image={`http://localhost:5000/${message.message}`}
+          image={`https://tweetchat-1y3f.onrender.com/${message.message}`}
         />
       </Modal>
     </>

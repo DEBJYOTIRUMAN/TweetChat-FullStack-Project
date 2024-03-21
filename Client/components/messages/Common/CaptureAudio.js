@@ -155,7 +155,7 @@ const CaptureAudio = ({
       const formData = new FormData();
       formData.append("audio", renderedAudio);
       const response = await axios.post(
-        "http://localhost:5000/api/add-audio-message",
+        "https://tweetchat-1y3f.onrender.com/api/add-audio-message",
         formData,
         {
           headers: {

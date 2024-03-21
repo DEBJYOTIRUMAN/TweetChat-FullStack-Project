@@ -26,7 +26,7 @@ const Comment = ({
 }) => {
   const deleteComment = async () => {
     await post.comments.splice(post.comments.indexOf(comment), 1);
-    fetch(`http://localhost:5000/api/post/comment/${post._id}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/post/comment/${post._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

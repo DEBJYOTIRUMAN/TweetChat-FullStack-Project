@@ -16,7 +16,7 @@ const reset = () => {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`http://localhost:5000/api/link/${id}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/link/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const reset = () => {
   };
 
   const resetPassword = (values) => {
-    fetch("http://localhost:5000/api/update", {
+    fetch("https://tweetchat-1y3f.onrender.com/api/update", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -51,9 +51,9 @@ const Post = ({
     } else {
       likes = likes.filter((item) => item !== currentAccount);
     }
-    let url = `http://localhost:5000/api/post/like/${post._id}`;
+    let url = `https://tweetchat-1y3f.onrender.com/api/post/like/${post._id}`;
     if (pathName === "/explore") {
-      url = `http://localhost:5000/api/news/like/${post._id}`;
+      url = `https://tweetchat-1y3f.onrender.com/api/news/like/${post._id}`;
     }
     fetch(url, {
       method: "PUT",
@@ -80,7 +80,7 @@ const Post = ({
     } else {
       reposts = reposts.filter((item) => item !== currentAccount);
     }
-    fetch(`http://localhost:5000/api/post/repost/${post._id}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/post/repost/${post._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +99,7 @@ const Post = ({
   };
 
   const deletePost = async () => {
-    fetch(`http://localhost:5000/api/post/${post._id}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/post/${post._id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token.access_token}`,

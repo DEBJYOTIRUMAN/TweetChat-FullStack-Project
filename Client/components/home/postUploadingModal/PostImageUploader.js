@@ -22,7 +22,7 @@ const PostImageUploader = ({ posts, setPosts, setUploadModalVisible }) => {
     formData.append("image", postImage);
     try {
       const newPost = await axios.post(
-        `http://localhost:5000/api/post/${currentAccount}`,
+        `https://tweetchat-1y3f.onrender.com/api/post/${currentAccount}`,
         formData,
         {
           headers: {

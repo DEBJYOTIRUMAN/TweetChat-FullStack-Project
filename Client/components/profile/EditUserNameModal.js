@@ -26,7 +26,7 @@ const EditUserNameModal = ({
   const [name, setName] = useState(currentUser.name);
   const updateUserName = () => {
     if (!name) return;
-    fetch(`http://localhost:5000/api/user/${currentAccount}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/user/${currentAccount}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

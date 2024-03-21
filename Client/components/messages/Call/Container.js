@@ -34,7 +34,7 @@ const Container = ({
         const {
           data: { token: returnedToken },
         } = await axios.get(
-          `http://localhost:5000/api/generate-call-token/${currentUser.id}`
+          `https://tweetchat-1y3f.onrender.com/api/generate-call-token/${currentUser.id}`
         );
         setToken(returnedToken);
       } catch (err) {

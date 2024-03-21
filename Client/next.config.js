@@ -4,7 +4,9 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        hostname: "localhost",
+        protocol: 'https',
+        hostname: 'tweetchat-1y3f.onrender.com',
+        pathname: '**',
       },
     ],
   },

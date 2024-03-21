@@ -53,7 +53,7 @@ export const TweetChatProvider = ({ children }) => {
   }, [token]);
 
   const fetchUser = () => {
-    fetch("http://localhost:5000/api/me", {
+    fetch("https://tweetchat-1y3f.onrender.com/api/me", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token.access_token}`,
@@ -72,7 +72,7 @@ export const TweetChatProvider = ({ children }) => {
 
   const fetchAllUsers = async () => {
     try {
-      await fetch("http://localhost:5000/api/user", {
+      await fetch("https://tweetchat-1y3f.onrender.com/api/user", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token.access_token}`,
@@ -92,7 +92,7 @@ export const TweetChatProvider = ({ children }) => {
 
   const fetchPosts = async () => {
     try {
-      await fetch("http://localhost:5000/api/post", {
+      await fetch("https://tweetchat-1y3f.onrender.com/api/post", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token.access_token}`,
@@ -109,7 +109,7 @@ export const TweetChatProvider = ({ children }) => {
 
   const fetchNews = async () => {
     try {
-      await fetch("http://localhost:5000/api/news", {
+      await fetch("https://tweetchat-1y3f.onrender.com/api/news", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token.access_token}`,
@@ -143,7 +143,7 @@ export const TweetChatProvider = ({ children }) => {
       );
       updateFollowing = updateFollowing.filter((item) => item !== user._id);
     }
-    fetch(`http://localhost:5000/api/user/follow/${user._id}`, {
+    fetch(`https://tweetchat-1y3f.onrender.com/api/user/follow/${user._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -172,7 +172,7 @@ export const TweetChatProvider = ({ children }) => {
 
   useEffect(() => {
     if (currentUser) {
-      socketRef.current = io("http://localhost:5000");
+      socketRef.current = io("https://tweetchat-1y3f.onrender.com");
       socketRef.current.emit("add-user", currentUser.id);
       setSocket(socketRef);
     }
@@ -229,7 +229,7 @@ export const TweetChatProvider = ({ children }) => {
         const {
           data: { messages },
         } = await axios.get(
-          `http://localhost:5000/api/get-messages/${currentUser.id}/${currentChatUser.id}`,
+          `https://tweetchat-1y3f.onrender.com/api/get-messages/${currentUser.id}/${currentChatUser.id}`,
           {
             headers: {
               Authorization: `Bearer ${token.access_token}`,

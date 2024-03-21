@@ -16,7 +16,7 @@ const login = () => {
   };
 
   const handleLogin = (values) => {
-    fetch("http://localhost:5000/api/login", {
+    fetch("https://tweetchat-1y3f.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const login = () => {
     if (errors) {
       return alert(errors);
     }
-    fetch("http://localhost:5000/api/forgot", {
+    fetch("https://tweetchat-1y3f.onrender.com/api/forgot", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
