@@ -112,7 +112,7 @@ const Container = ({
             data.callType === "video" ? "video" : "audio"
           );
           videoElement.id = "video-local-zego";
-          videoElement.className = "h-28 w-32";
+          videoElement.className = "h-20 w-32";
           videoElement.autoplay = true;
           videoElement.muted = false;
           videoElement.playsInline = true;
@@ -176,8 +176,8 @@ const Container = ({
           />
         </div>
       )}
-      <div className="my-5 relative sm:h-screen/3" id="remote-video">
-        <div className="absolute bottom-5 right-5 sm:bottom-0 sm:right-0" id="local-video"></div>
+      <div className="my-5 relative" id="remote-video">
+        <div className="absolute bottom-5 right-5" id="local-video"></div>
       </div>
       <div className="h-16 w-16 bg-red-600 flex items-center justify-center rounded-full sm:h-12 sm:w-12">
         <MdOutlineCallEnd
