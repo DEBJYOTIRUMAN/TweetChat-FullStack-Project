@@ -137,7 +137,6 @@ const CaptureAudio = ({
 
   const handlePlayRecording = () => {
     if (recordedAudio) {
-      waveform.stop();
       waveform.play();
       recordedAudio.play();
       setIsPlaying(true);
@@ -145,7 +144,7 @@ const CaptureAudio = ({
   };
 
   const handlePauseRecording = () => {
-    waveform.stop();
+    waveform.pause();
     recordedAudio.pause();
     setIsPlaying(false);
   };

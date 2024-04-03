@@ -68,7 +68,6 @@ const VoiceMessage = ({ message, currentChatUser, currentUser }) => {
 
   const handlePlayAudio = () => {
     if (audioMessage) {
-      waveform.current.stop();
       waveform.current.play();
       audioMessage.play();
       setIsPlaying(true);
@@ -76,18 +75,17 @@ const VoiceMessage = ({ message, currentChatUser, currentUser }) => {
   };
 
   const handlePauseAudio = () => {
-    waveform.current.stop();
+    waveform.current.pause();
     audioMessage.pause();
     setIsPlaying(false);
   };
 
   return (
     <div
-      className={`flex items-center gap-5 sm:gap-2 text-white px-4 py-4 text-sm rounded-md ${
-        message.sender === currentChatUser.id
-          ? "bg-panel-header-background"
-          : "bg-outgoing-background"
-      }`}
+      className={`flex items-center gap-5 sm:gap-2 text-white px-4 py-4 text-sm rounded-md ${message.sender === currentChatUser.id
+        ? "bg-panel-header-background"
+        : "bg-outgoing-background"
+        }`}
     >
       <div>
         {message.sender === currentChatUser.id ? (

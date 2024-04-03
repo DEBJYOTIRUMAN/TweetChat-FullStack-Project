@@ -7,8 +7,8 @@ export default function Initial() {
   const router = useRouter();
 
   useEffect(() => {
-    const app = (token) => {
-      if (!token.access_token) {
+    const app = () => {
+      if (!token || !token.access_token) {
         router.push("/login");
       } else {
         router.push("/home");
@@ -16,7 +16,7 @@ export default function Initial() {
     };
 
     if (typeof window !== "undefined") {
-      app(token);
+      app();
     }
   }, [token, router]);
 
