@@ -156,7 +156,7 @@ const Container = ({
   };
 
   return (
-    <div className="border-conversation-border border-1 w-full bg-conversation-panel-background flex flex-col h-screen overflow-hidden items-center justify-center text-white">
+    <div className="border-conversation-border border-1 w-full bg-conversation-panel-background flex flex-col h-full overflow-hidden items-center justify-center text-white">
       <div className="flex flex-col gap-3 items-center">
         <span className="text-5xl sm:text-3xl">{data.name}</span>
         <span className="text-lg">
@@ -176,7 +176,7 @@ const Container = ({
           />
         </div>
       )}
-      <div className="my-5 relative sm:h-screen/2 sm:my-2" id="remote-video">
+      <div className="my-5 relative sm:h-screen/2" id="remote-video">
         <div className="absolute bottom-5 right-5 sm:bottom-1 sm:right-1" id="local-video"></div>
       </div>
       <div className="h-16 w-16 bg-red-600 flex items-center justify-center rounded-full sm:h-12 sm:w-12">
