@@ -7,16 +7,16 @@ export default function Initial() {
   const router = useRouter();
 
   useEffect(() => {
-    const handleNavigation = async () => {
-      if (!token?.access_token) {
-        await router.push("/login");
+    const app = (token) => {
+      if (!token.access_token) {
+        router.push("/login");
       } else {
-        await router.push("/home");
+        router.push("/home");
       }
     };
 
     if (typeof window !== "undefined") {
-      handleNavigation();
+      app(token);
     }
   }, [token, router]);
 
