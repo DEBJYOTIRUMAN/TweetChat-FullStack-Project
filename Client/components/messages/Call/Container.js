@@ -156,7 +156,7 @@ const Container = ({
   };
 
   return (
-    <div className="border-conversation-border border-1 w-full bg-conversation-panel-background flex flex-col h-full overflow-hidden items-center justify-center text-white">
+    <div className="border-conversation-border border-1 w-full bg-conversation-panel-background flex flex-col h-screen overflow-hidden items-center justify-center text-white">
       <div className="flex flex-col gap-3 items-center">
         <span className="text-5xl sm:text-3xl">{data.name}</span>
         <span className="text-lg">
@@ -171,7 +171,7 @@ const Container = ({
             src={data.profileImage}
             alt="avatar"
             fill
-            style={{objectFit:"cover"}}
+            style={{ objectFit: "cover" }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
