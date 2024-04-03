@@ -112,7 +112,7 @@ const Container = ({
             data.callType === "video" ? "video" : "audio"
           );
           videoElement.id = "video-local-zego";
-          videoElement.className = "h-20 w-32";
+          videoElement.className = "h-28 w-32";
           videoElement.autoplay = true;
           videoElement.muted = false;
           videoElement.playsInline = true;
