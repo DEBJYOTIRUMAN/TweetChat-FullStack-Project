@@ -177,7 +177,7 @@ const Container = ({
         </div>
       )}
       <div className="my-5 relative" id="remote-video">
-        <div className="absolute bottom-5 right-5" id="local-video"></div>
+        <div className="absolute bottom-0 right-0" id="local-video"></div>
       </div>
       <div className="h-16 w-16 bg-red-600 flex items-center justify-center rounded-full sm:h-12 sm:w-12">
         <MdOutlineCallEnd
