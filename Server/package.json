@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "Debjyoti Das",
   "license": "ISC",
+  "engines": {
+    "node": "18.19.1"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
