@@ -8,7 +8,7 @@ export default function Initial() {
 
   useEffect(() => {
     const handleNavigation = async () => {
-      if (!token?.access_token) {
+      if (!token || !token.access_token) {
         await safePush("/login");
       } else {
         await safePush("/home");
