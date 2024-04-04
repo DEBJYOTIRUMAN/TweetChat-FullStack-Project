@@ -1,22 +1,24 @@
 import { useContext, useEffect } from "react";
 import { TweetChatContext } from "../context/TweetChatContext";
-import { useSafeNavigation } from "../lib/useSafeNavigation";
+import { useRouter } from "next/router";
 
 export default function Initial() {
   const { token } = useContext(TweetChatContext);
-  const safePush = useSafeNavigation();
+  const router = useRouter();
 
   useEffect(() => {
-    const handleNavigation = async () => {
+    const app = () => {
       if (!token || !token.access_token) {
-        await safePush("/login");
+        router.push("/login");
       } else {
-        await safePush("/home");
+        router.push("/home");
       }
     };
 
-    handleNavigation();
-  }, [token]);
+    if (typeof window !== "undefined") {
+      app();
+    }
+  }, [token, router]);
 
   return null;
 }
